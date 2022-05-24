@@ -1,0 +1,16 @@
+.exp-section {
+    display: block;
+    text-align: left;
+    .header {
+        font-size: 36px;
+        margin-bottom: 13px;
+    }
+    .text {
+        font-size: 18px;
+    }
+    .left {
+        .timeline {
+            margin-top: 26px;
+        }
+    }
+}

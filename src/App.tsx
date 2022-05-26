@@ -4,6 +4,8 @@ import NavHeader from './NavHeader';
 import IntroSection from './IntroSection';
 import ProjectsSection from './ProjectsSection';
 import ExperienceSection from './ExperienceSection';
+import DiarySection from './DiarySection';
+import Resume from './Resume';
 import "@fontsource/nunito-sans";
 
 function App() {
@@ -14,6 +16,8 @@ function App() {
       <IntroSection />
       <ProjectsSection />
       <ExperienceSection />
+      <DiarySection />
+      <Resume />
       </div>
       
       {/* <header className="App-header">

@@ -1,16 +1,47 @@
 .exp-section {
     display: block;
     text-align: left;
-    .header {
+    margin-top: 50px;
+    h2 {
         font-size: 36px;
         margin-bottom: 13px;
     }
     .text {
         font-size: 18px;
     }
-    .left {
-        .timeline {
-            margin-top: 26px;
+    .experience {
+        margin-top: 26px;
+        display: flex;
+        width: 80%;
+        .left {
+            align-items: center;
+            .timeline {
+                display: flex;
+            }
+        }
+        .right {
+            font-size: 18px;
+            .position {
+                margin-bottom: 15px;
+                .company-name {
+                    display: inline;
+                    color: #FECB02;
+                    font-weight: 700;
+                }
+            }
+            .time {
+                margin-bottom: 15px;
+            }
+            ul.details {
+                list-style-image: url('../assets/bullet.svg');
+                padding-left: 20px;
+                .bullet {
+                    margin-bottom: 10px;
+                }
+               
+            }
+            
         }
     }
+    
 }

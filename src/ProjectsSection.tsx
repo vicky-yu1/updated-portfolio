@@ -1,9 +1,9 @@
-import './styles/IntroSection.scss';
+import './styles/ProjectsSection.scss';
 
 const ProjectsSection = () => {
   return (
-      <div className="section">
-          <div className="title">My Projects</div>
+      <div className="projects-section" id="projects">
+          <h2>My Projects</h2>
           <div className="filters">Under construction</div>
       </div>
   );

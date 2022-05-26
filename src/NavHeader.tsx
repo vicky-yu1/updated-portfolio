@@ -10,10 +10,10 @@ const NavHeader = () => {
                 <img src={vy} />
             </div>
             <div className='right'>
-                <a className='nav-heading'>PROJECTS</a>
-                <a className='nav-heading'>EXPERIENCE</a>
-                <a className='nav-heading'>LA DIARY</a>
-                <a className='nav-heading'>RESUME</a>
+                <a className='nav-heading' href="#projects">PROJECTS</a>
+                <a className='nav-heading' href="#experience">EXPERIENCE</a>
+                <a className='nav-heading' href="#diary">LA DIARY</a>
+                <a className='nav-heading' href="#resume">RESUME</a>
                 <ContactButton text={"GET IN TOUCH"} />
             </div>
         </div>

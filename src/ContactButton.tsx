@@ -5,7 +5,9 @@ interface Props {
 }
 
 const ContactButton = ({text}: Props) => {
-  return <button className="contact">{text}</button>;
+  return (
+    <a href="mailto:yuvicky24@gmail.com"><button className="contact">{text}</button></a>
+  );
 };
 
 export default ContactButton;

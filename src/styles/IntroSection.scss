@@ -7,16 +7,18 @@
             display: block;
             .title {
                 font-size: 36px;
-                display: flex;
+                display: block;
                 .text-animation {
                     margin-left: 10px;
+                    display: inline;
                 }
             }
-            .name {
+            h1 {
                 font-family: "Montserrat";
                 font-size: 96px;
                 font-weight: 700;
-                
+                margin-top: 10px;
+                margin-bottom: 10px;
             }
             
         }

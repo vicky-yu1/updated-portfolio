@@ -57,7 +57,7 @@ const ExperienceMobile = () => {
   return (
       <div className="section-mobile" id="experience">
         <h2>Work Experience</h2>
-        <div className="text">Interested in my resume? Click here.</div>
+        <div className="text">Interested in my resume? Click <a href="#resume">here</a>.</div>
         <div className="experience">
         <div className="left">
         {

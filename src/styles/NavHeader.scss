@@ -24,6 +24,11 @@
         align-items: center;
         .nav-heading {
             margin-right: 50px;
+            color: white;
+            text-decoration: none;
+        }
+        .nav-heading:hover {
+            color: #FECB02;
         }
         .hamburger-menu {
             border: none;

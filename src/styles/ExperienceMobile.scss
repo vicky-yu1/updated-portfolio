@@ -1,0 +1,47 @@
+.section-mobile {
+    display: block;
+    text-align: left;
+    h2 {
+        font-size: 36px;
+        margin-bottom: 13px;
+    }
+    .text {
+        font-size: 18px;
+    }
+    .experience {
+        margin-top: 26px;
+        width: 100%;
+        .left {
+            align-items: center;
+            display: flex;
+            overflow-x: scroll;
+            .timeline {
+                display: flex;
+            }
+        }
+        .right {
+            font-size: 18px;
+            .position {
+                margin-bottom: 15px;
+                .company-name {
+                    display: inline;
+                    color: #FECB02;
+                    font-weight: 700;
+                }
+            }
+            .time {
+                margin-bottom: 15px;
+            }
+            ul.details {
+                list-style-image: url('../assets/bullet.svg');
+                padding-left: 20px;
+                .bullet {
+                    margin-bottom: 10px;
+                }
+               
+            }
+            
+        }
+    }
+    
+}

@@ -1,14 +1,13 @@
-.company {
+.company-mobile {
     border: none;
     background-color: transparent;
-    // border-left: 5px solid white;
-    padding-left: 25px;
+    padding-right: 25px;
+    white-space: nowrap;
     display: block;
     font-size: 18px;
     font-family: "Nunito Sans";
     color: white;
     height: 58px;
-    width: 250px;
     text-align: left;
     cursor: pointer;
 }       

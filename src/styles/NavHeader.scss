@@ -3,9 +3,19 @@
     justify-content: space-between;
     align-items: center;
     font-family: "Montserrat";
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    padding: 16px 36px;
+    background-color: #511313;
+    z-index: 5;
+
+
     .left {
         width: 10%;
         img {
+            min-width: 50px;
             max-width:100%;
         }
     }
@@ -14,6 +24,11 @@
         align-items: center;
         .nav-heading {
             margin-right: 50px;
+        }
+        .hamburger-menu {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
         }
     }
 }

@@ -8,9 +8,10 @@ html {
   min-height: 100vh;
   font-family: "Nunito Sans";
   color: white;
+  overflow: hidden;
 
   .content {
-    padding: 39px 72px 39px 72px;
+    
     display: block;
   }
   

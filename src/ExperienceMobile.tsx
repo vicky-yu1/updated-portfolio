@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import CompanyMobile from './CompanyMobile';
+import parseKeywords from './utils/ParseKeywords'
 import './styles/ExperienceMobile.scss';
 
 const ExperienceMobile = () => {
@@ -80,67 +81,8 @@ const ExperienceMobile = () => {
             <div className="time"> {experienceArray[clickedExp].time}</div>
             <ul className="details"> 
             {experienceArray[clickedExp].experience.map((bullet) => {
-                let str = "";
-                let regex = "("
-                experienceArray[clickedExp].keywords?.map((word) => {
-                    if(word.includes("(") || word.includes("+")) {
-                        for (let i = 0; i < word.length; i++) {
-                            if(word.charAt(i) == "(" || word.charAt(i) == ")" || word.charAt(i) == "+" ) {
-                                regex += "\\" + word.charAt(i);
-                            }
-                            else {
-                                regex += word.charAt(i);
-                            }
-                        }
-                        regex += "|";
-                    }
-                    else {
-                        regex += word + "|";
-                    }
-                })
-                regex = regex.slice(0, -1);
-                regex += ")"
-                if(experienceArray[clickedExp].keywords) {
-                    const strArr = bullet.split(RegExp(regex));
-                    strArr.map((subStr, idx) => {
-                        if(subStr.replace(" ", "") != "," && experienceArray[clickedExp].keywords?.find(a => a.includes(subStr)) != undefined) {
-                            str += "<span className='keyword'>" + subStr + "</span>";
-                        }
-                        else if(subStr) {
-                            str += subStr;
-                        }
-                    })
-                }
-                else {
-                    str = bullet;
-                }
-                
-                
-                // experienceArray[clickedExp].keywords?.map((word) => {
-                //     bullet.split(word);
-                //     str += 
-                //     // const includesComma = bullet.includes(",");
-                //     // if(bullet.includes(word)) {
-                //     //     if(includesComma) {
-                //     //         str += "<span class='#FECB02'>" + word + " </span>" + ", "
-                //     //     }
-                //     //     else {
-                //     //         str += "<span class='#FECB02'>" + word + " </span>" + " ";
-                //     //     }
-                //     // }
-                //     // else {
-                //     //     if(includesComma) {
-                //     //         str += bullet + ", ";
-                //     //     }
-                //     //     else {
-                //     //         str += word + " ";
-                //     //     }
-                //     // }
-                // })
-                    // console.log("BULLET: " + bullet, "KEYWORDS: " + experienceArray[clickedExp].keywords, "STR: " + str);
-
+                const str = parseKeywords(experienceArray[clickedExp].keywords, bullet);
                 return <li className="bullet" dangerouslySetInnerHTML={{__html: str}}></li>
-                
             })
             }
             </ul>

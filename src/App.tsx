@@ -3,16 +3,8 @@ import './App.scss';
 import { useMediaQuery } from 'react-responsive'
 import NavHeader from './NavHeader';
 import NavHeaderMobile from './NavHeaderMobile';
-import IntroSection from './IntroSection';
-import IntroSectionMobile from './IntroSectionMobile';
-import ProjectsSection from './ProjectsSection';
-import ProjectsSectionMobile from './ProjectsSectionMobile';
-import ExperienceSection from './ExperienceSection';
-import ExperienceMobile from './ExperienceMobile';
-import DiarySection from './DiarySection';
-import DiarySectionMobile from './DiarySectionMobile';
-import Resume from './Resume';
 import "@fontsource/nunito-sans";
+import Main from './Main';
 
 export const ScreenContext = createContext<boolean | null>(null)
 
@@ -58,22 +50,8 @@ function App() {
         { visible && <NavHeader openMenu={openMobileMenu} setOpenMenu={setOpenMobileMenu}/> }
         { visible && <NavHeaderMobile openMenu={openMobileMenu} setOpenMenu={setOpenMobileMenu}/> }
         
-        { isDesktopOrLaptop && <IntroSection /> }
-        { !isDesktopOrLaptop && <IntroSectionMobile /> }
-        { isDesktopOrLaptop && <ProjectsSection /> }
-        { !isDesktopOrLaptop && <ProjectsSectionMobile /> }
-        { isDesktopOrLaptop && <ExperienceSection /> }
-        { !isDesktopOrLaptop && <ExperienceMobile /> }
-        { isDesktopOrLaptop && <DiarySection /> }
-        { !isDesktopOrLaptop && <DiarySectionMobile /> }
-        <Resume />
+        <Main />
       </ScreenContext.Provider>
-      {/* { isDesktopOrLaptop && <NavHeader /> }
-      <IntroSection />
-      <ProjectsSection />
-      <ExperienceSection />
-      <DiarySection />
-      <Resume /> */}
       </div>
       
       {/* <header className="App-header">

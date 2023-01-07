@@ -6,6 +6,14 @@ import './styles/ExperienceMobile.scss';
 const ExperienceMobile = () => {
     const experienceArray = [
         {
+            "company": "Oracle Cloud Infrastructure",
+            "position": "Software Engineer 2",
+            "time": "Jul 2022 - Present",
+            "experience": ["Design and develop highly scalable features and APIs for the OCI Roving Edge Infrastructure compute team using Java and Docker containers",
+            "Fix security vulnerabilities and run behavioral-driven tests (BDD) to meet security requirements"],
+            "keywords": ["Java", "Docker", "BDD"]
+        },
+        {
             "company": "Rivian",
             "position": "Software Engineer Intern",
             "time": "Sep 2021 - Apr 2022",

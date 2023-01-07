@@ -13,10 +13,12 @@
     "@types/node": "^16.11.36",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
+    "express": "^4.18.2",
     "gh-pages": "^4.0.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-responsive": "^9.0.0-beta.8",
+    "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
     "typewriter-effect": "^2.18.2",
     "web-vitals": "^2.1.4"
@@ -24,7 +26,8 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build",
-    "start": "react-scripts start",
+    "start": "concurrently \"react-scripts start\" \"npm run start-backend\"",
+    "start-backend": "nodemon src/backend/server.js --ignore client",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -50,6 +53,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.25.0",
     "@typescript-eslint/parser": "^5.25.0",
+    "concurrently": "^7.6.0",
     "eslint": "^8.16.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
@@ -63,5 +67,6 @@
     "prettier": "^2.6.2",
     "sass": "^1.52.1",
     "typescript": "^4.6.4"
-  }
+  },
+  "proxy": "http://localhost:3001"
 }

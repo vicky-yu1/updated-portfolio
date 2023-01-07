@@ -15,7 +15,7 @@ const IntroSection = () => {
                 <div className="text-animation">
                     <Typewriter
                         options={{
-                            strings: ['trojan', 'full-stack developer', 'leader'],
+                            strings: ['trojan', 'full-stack developer', 'leader', 'foodie'],
                             autoStart: true,
                             loop: true,
                         }}
